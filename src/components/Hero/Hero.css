@@ -72,7 +72,7 @@
 @media screen and (max-width: 768px) {
   .hero_main {
     grid-template-columns: none;
-    grid-auto-rows: fr;
+    grid-auto-rows: 1fr;
     height: 40em;
     margin: 25px;
   }
@@ -94,9 +94,9 @@
   }
 
   .hero_main img {
-    height: 15em;
-    width: 15em;
-    right: 10%;
+    height: 20em;
+    width: 20em;
+    right: 0;
   }
 
   .hero_main_content {
