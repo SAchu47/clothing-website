@@ -1,5 +1,4 @@
 .hero_main {
-  margin: 50px;
   height: 32rem;
   width: 100%;
   border-radius: 10px;
@@ -74,7 +73,6 @@
     grid-template-columns: none;
     grid-auto-rows: 1fr;
     height: 40em;
-    margin: 25px;
   }
 
   .hero_main_image {
