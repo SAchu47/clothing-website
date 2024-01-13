@@ -2,74 +2,12 @@ import React, { FC, ReactElement } from 'react';
 import './ProductListing.css';
 
 interface Product {
+  id?: number;
   imageUrl: string;
   productName: string;
   productPrice: string;
   productSellingPrice: string;
 }
-
-const data: Product[] = [
-  {
-    imageUrl: 'productlisting1.png',
-    productName: 'Pale Green Top',
-    productPrice: '$16.48',
-    productSellingPrice: '$6.48',
-  },
-  {
-    imageUrl: 'productlisting2.png',
-    productName: 'Pale Green Top',
-    productPrice: '$16.48',
-    productSellingPrice: '$6.48',
-  },
-  {
-    imageUrl: 'productlisting3.png',
-    productName: 'Pale Green Top',
-    productPrice: '$16.48',
-    productSellingPrice: '$6.48',
-  },
-  {
-    imageUrl: 'productlisting4.png',
-    productName: 'Pale Green Top',
-    productPrice: '$16.48',
-    productSellingPrice: '$6.48',
-  },
-  {
-    imageUrl: 'productlisting5.png',
-    productName: 'Pale Green Top',
-    productPrice: '$16.48',
-    productSellingPrice: '$6.48',
-  },
-  {
-    imageUrl: 'productlisting3.png',
-    productName: 'Pale Green Top',
-    productPrice: '$16.48',
-    productSellingPrice: '$6.48',
-  },
-  {
-    imageUrl: 'productlisting6.png',
-    productName: 'Pale Green Top',
-    productPrice: '$16.48',
-    productSellingPrice: '$6.48',
-  },
-  {
-    imageUrl: 'productlisting7.png',
-    productName: 'Pale Green Top',
-    productPrice: '$16.48',
-    productSellingPrice: '$6.48',
-  },
-  {
-    imageUrl: 'productlisting8.png',
-    productName: 'Pale Green Top',
-    productPrice: '$16.48',
-    productSellingPrice: '$6.48',
-  },
-  {
-    imageUrl: 'productlisting1.png',
-    productName: 'Pale Green Top',
-    productPrice: '$16.48',
-    productSellingPrice: '$6.48',
-  },
-];
 
 const ProductComponent: FC<Product> = (props): ReactElement => {
   return (
@@ -89,6 +27,79 @@ const ProductComponent: FC<Product> = (props): ReactElement => {
 };
 
 const ProductListing: FC = (): ReactElement => {
+  const data: Product[] = [
+    {
+      id: 1,
+      imageUrl: 'productlisting1.png',
+      productName: 'Pale Green Top',
+      productPrice: '$16.48',
+      productSellingPrice: '$6.48',
+    },
+    {
+      id: 2,
+      imageUrl: 'productlisting2.png',
+      productName: 'Pale Green Top',
+      productPrice: '$16.48',
+      productSellingPrice: '$6.48',
+    },
+    {
+      id: 3,
+      imageUrl: 'productlisting3.png',
+      productName: 'Pale Green Top',
+      productPrice: '$16.48',
+      productSellingPrice: '$6.48',
+    },
+    {
+      id: 4,
+      imageUrl: 'productlisting4.png',
+      productName: 'Pale Green Top',
+      productPrice: '$16.48',
+      productSellingPrice: '$6.48',
+    },
+    {
+      id: 5,
+      imageUrl: 'productlisting5.png',
+      productName: 'Pale Green Top',
+      productPrice: '$16.48',
+      productSellingPrice: '$6.48',
+    },
+    {
+      id: 6,
+      imageUrl: 'productlisting3.png',
+      productName: 'Pale Green Top',
+      productPrice: '$16.48',
+      productSellingPrice: '$6.48',
+    },
+    {
+      id: 7,
+      imageUrl: 'productlisting6.png',
+      productName: 'Pale Green Top',
+      productPrice: '$16.48',
+      productSellingPrice: '$6.48',
+    },
+    {
+      id: 8,
+      imageUrl: 'productlisting7.png',
+      productName: 'Pale Green Top',
+      productPrice: '$16.48',
+      productSellingPrice: '$6.48',
+    },
+    {
+      id: 9,
+      imageUrl: 'productlisting8.png',
+      productName: 'Pale Green Top',
+      productPrice: '$16.48',
+      productSellingPrice: '$6.48',
+    },
+    {
+      id: 10,
+      imageUrl: 'productlisting1.png',
+      productName: 'Pale Green Top',
+      productPrice: '$16.48',
+      productSellingPrice: '$6.48',
+    },
+  ];
+
   return (
     <div className="product_listing_main">
       <div className="product_listing_main_content">
@@ -109,6 +120,7 @@ const ProductListing: FC = (): ReactElement => {
           );
         })}
       </div>
+      <button>LOAD MORE PRODUCTS</button>
     </div>
   );
 };
