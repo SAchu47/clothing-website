@@ -1,0 +1,38 @@
+.features__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+}
+.features__main__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.features__main__content h4,
+p {
+  color: #737373;
+}
+
+.features__main__feature {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.main__feature_item {
+  padding: 35px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.main__feature_item p {
+  width: 232px;
+}

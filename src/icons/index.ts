@@ -1,4 +1,6 @@
-
+import { ArrowGrowthIcon } from './ArrowGrowthIcon';
+import { CarbonBookIcon } from './CarbonBookIcon';
+import { BookReaderIcon } from './BookReaderIcon';
 import { LikeIcon } from './LikeIcon';
 import { CartIcon } from './CartIcon';
 import { SearchIcon } from './SearchIcon';
@@ -8,5 +10,8 @@ export {
     AccountIcon,
     SearchIcon,
     CartIcon,
-    LikeIcon
+    LikeIcon,
+    BookReaderIcon,
+    CarbonBookIcon,
+    ArrowGrowthIcon,
 }
