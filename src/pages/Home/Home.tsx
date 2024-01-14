@@ -1,6 +1,11 @@
 import React, { FC, ReactElement } from 'react';
 import './Home.css';
-import { Categories, Hero, ProductListing } from '../../components';
+import {
+  Categories,
+  Hero,
+  MediaWithText,
+  ProductListing,
+} from '../../components';
 
 const Home: FC = (): ReactElement => {
   return (
@@ -8,6 +13,7 @@ const Home: FC = (): ReactElement => {
       <Hero />
       <Categories />
       <ProductListing />
+      <MediaWithText />
     </div>
   );
 };
