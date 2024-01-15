@@ -3,6 +3,7 @@ import './Home.css';
 import {
   Categories,
   Features,
+  Footer,
   Hero,
   MediaWithText,
   ProductListing,
@@ -16,6 +17,7 @@ const Home: FC = (): ReactElement => {
       <ProductListing />
       <MediaWithText />
       <Features />
+      <Footer />
     </div>
   );
 };
