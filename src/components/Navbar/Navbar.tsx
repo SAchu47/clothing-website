@@ -40,16 +40,16 @@ const Navbar: FC = (): ReactElement => {
           <li>
             <NavLink
               className="links"
-              to="/"
+              to="/categories"
               onClick={() => setMenuOpen(!menuOpen)}
             >
-              Featured Products
+              Categories
             </NavLink>
           </li>
           <li>
             <NavLink
               className="links"
-              to="/"
+              to="/#footer"
               onClick={() => setMenuOpen(!menuOpen)}
             >
               Contact

@@ -1,15 +1,13 @@
-import React, { FC, ReactElement } from 'react';
+import React, { FC, ReactElement, useEffect } from 'react';
 import './ProductListing.css';
+import { useAppDispatch, useAppSelector } from '../../store/store';
+import {
+  IProduct,
+  IProductsState,
+  addProducts,
+} from '../../store/features/ProductsSlice';
 
-interface Product {
-  id?: number;
-  imageUrl: string;
-  productName: string;
-  productPrice: string;
-  productSellingPrice: string;
-}
-
-const ProductComponent: FC<Product> = (props): ReactElement => {
+const ProductComponent: FC<IProduct> = (props): ReactElement => {
   return (
     <div>
       <div className="product_listing__product__img">
@@ -26,91 +24,21 @@ const ProductComponent: FC<Product> = (props): ReactElement => {
   );
 };
 
-const ProductListing: FC = (): ReactElement => {
-  const data: Product[] = [
-    {
-      id: 1,
-      imageUrl: 'productlisting1.png',
-      productName: 'Pale Green Top',
-      productPrice: '$16.48',
-      productSellingPrice: '$6.48',
-    },
-    {
-      id: 2,
-      imageUrl: 'productlisting2.png',
-      productName: 'Pale Green Top',
-      productPrice: '$16.48',
-      productSellingPrice: '$6.48',
-    },
-    {
-      id: 3,
-      imageUrl: 'productlisting3.png',
-      productName: 'Pale Green Top',
-      productPrice: '$16.48',
-      productSellingPrice: '$6.48',
-    },
-    {
-      id: 4,
-      imageUrl: 'productlisting4.png',
-      productName: 'Pale Green Top',
-      productPrice: '$16.48',
-      productSellingPrice: '$6.48',
-    },
-    {
-      id: 5,
-      imageUrl: 'productlisting5.png',
-      productName: 'Pale Green Top',
-      productPrice: '$16.48',
-      productSellingPrice: '$6.48',
-    },
-    {
-      id: 6,
-      imageUrl: 'productlisting3.png',
-      productName: 'Pale Green Top',
-      productPrice: '$16.48',
-      productSellingPrice: '$6.48',
-    },
-    {
-      id: 7,
-      imageUrl: 'productlisting6.png',
-      productName: 'Pale Green Top',
-      productPrice: '$16.48',
-      productSellingPrice: '$6.48',
-    },
-    {
-      id: 8,
-      imageUrl: 'productlisting7.png',
-      productName: 'Pale Green Top',
-      productPrice: '$16.48',
-      productSellingPrice: '$6.48',
-    },
-    {
-      id: 9,
-      imageUrl: 'productlisting8.png',
-      productName: 'Pale Green Top',
-      productPrice: '$16.48',
-      productSellingPrice: '$6.48',
-    },
-    {
-      id: 10,
-      imageUrl: 'productlisting1.png',
-      productName: 'Pale Green Top',
-      productPrice: '$16.48',
-      productSellingPrice: '$6.48',
-    },
-  ];
+const ProductListing: FC<IProductsState> = (props): ReactElement => {
+  const products: IProductsState = useAppSelector((state) => state.products);
 
   return (
     <div className="product_listing_main">
       <div className="product_listing_main_content">
-        <h4>Featured Products</h4>
-        <h3>BESTSELLER PRODUCTS</h3>
-        <p>Problems trying to resolve the conflict between </p>
+        <h4>{products.subHeading}</h4>
+        <h3>{products.mainHeading}</h3>
+        <p>{products.description}</p>
       </div>
       <div className="product_listing_main_product">
-        {data.map((item: Product, index) => {
+        {products.products.map((item: IProduct, index) => {
           return (
             <ProductComponent
+              id={item.id}
               imageUrl={item.imageUrl}
               productName={item.productName}
               productPrice={item.productPrice}
@@ -120,7 +48,7 @@ const ProductListing: FC = (): ReactElement => {
           );
         })}
       </div>
-      <button>LOAD MORE PRODUCTS</button>
+      {products.isLoadMore && <button>LOAD MORE PRODUCTS</button>}
     </div>
   );
 };

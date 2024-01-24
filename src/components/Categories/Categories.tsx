@@ -1,9 +1,22 @@
-import React, { FC, ReactElement } from 'react';
+import React, { FC, ReactElement, useRef } from 'react';
 import './Categories.css';
 
-const Categories: FC = (): ReactElement => {
+interface Category {
+  isLeftAligned: boolean;
+}
+
+const Categories: FC<Category> = (props): ReactElement => {
+  const firstCatRef = useRef(null);
+
+  if (props.isLeftAligned) {
+    firstCatRef.current;
+  }
   return (
-    <div className="categories_main">
+    <div
+      className={
+        props.isLeftAligned ? 'categories_main' : 'categories_right__main'
+      }
+    >
       <div className="categories_main_image_first">
         <img src="category1.jpg" alt="" />
         <div>

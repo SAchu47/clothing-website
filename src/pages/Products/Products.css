@@ -1,0 +1,17 @@
+.products__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.spinner {
+  height: 100dvh;
+}
+
+@media screen and (max-width: 768px) {
+  .products__main {
+    margin: 25px;
+  }
+}

@@ -1,0 +1,12 @@
+.featured_products__main {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  gap: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .featured_products__main {
+    margin: 25px;
+  }
+}

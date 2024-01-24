@@ -3,7 +3,7 @@ import './Footer.css';
 
 const Footer: FC = (): ReactElement => {
   return (
-    <div className="footer__mian">
+    <div className="footer__mian" id="footer">
       <div className="footer__main__links">
         <h5>Company Info</h5>
         <div className="links">About Us</div>

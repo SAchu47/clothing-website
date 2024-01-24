@@ -1,3 +1,4 @@
+import { LoadIcon } from './LoadIcon';
 import { ArrowGrowthIcon } from './ArrowGrowthIcon';
 import { CarbonBookIcon } from './CarbonBookIcon';
 import { BookReaderIcon } from './BookReaderIcon';
@@ -14,4 +15,5 @@ export {
     BookReaderIcon,
     CarbonBookIcon,
     ArrowGrowthIcon,
+    LoadIcon
 }
