@@ -24,7 +24,7 @@ const ProductComponent: FC<IProduct> = (props): ReactElement => {
   );
 };
 
-const ProductListing: FC<IProductsState> = (props): ReactElement => {
+const ProductListing: FC<IProductsState> = (): ReactElement => {
   const products: IProductsState = useAppSelector((state) => state.products);
 
   return (
