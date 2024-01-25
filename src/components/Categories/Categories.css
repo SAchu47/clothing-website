@@ -40,7 +40,8 @@
   align-items: center;
 }
 
-.categories_main div button {
+.categories_main div button,
+.categories_right__main div button {
   padding: 15px 40px;
   background: rgba(45, 139, 192, 0.75);
   border: 1px solid white;
@@ -49,7 +50,8 @@
   cursor: pointer;
 }
 
-.categories_main div button:hover {
+.categories_main div button:hover,
+.categories_right__main div button:hover {
   background: rgba(99, 180, 228, 0.75);
 }
 
@@ -84,7 +86,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  .categories_main {
+  .categories_main,
+  .categories_right__main {
     flex-direction: column;
     align-items: center;
   }
